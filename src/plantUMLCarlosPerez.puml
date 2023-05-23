@@ -1,5 +1,6 @@
 @startuml
 class Member {
+email : String
 }
 
 class BoardMember {
@@ -7,10 +8,14 @@ class BoardMember {
 }
 
 class Event {
+date : Date
+description : String
+assign(l : Location) :void
 
 }
 
 class Conference {
+max_attendees : Integer
 
 }
 
@@ -18,23 +23,31 @@ class BoardMeeting {
 }
 
 class Location {
+description : String
+adress : String
 
 }
 
 class Person {
+name : String
 }
 
 class AAOUC {
+newLocation(l :Location) : void
+newEvent(e : Event) :void
+newPerson(p :Person) :void
+informEvent(e : Event) :void
+registe(m : Member,(e : Event) : void
 }
 
 Event <|-- BoardMeeting
 Conference --|> Event
-BoardMember --|> Member
+BoardMember --|> Member: islocated in
 Member --|> Person
 Location -- Event
-Event -- Member
-Conference -- Person
-BoardMember -- BoardMeeting
+Event -- Member: attends to
+Conference -- Person: attends to
+BoardMember -- BoardMeeting: attends to
 AAOUC *-- Event
 AAOUC *-- Location
 AAOUC *-- Person
