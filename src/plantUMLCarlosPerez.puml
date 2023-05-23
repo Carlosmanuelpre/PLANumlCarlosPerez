@@ -23,4 +23,21 @@ class Location {
 
 class Person {
 }
+
+class AAOUC {
+}
+
+Event <|-- BoardMeeting
+Conference --|> Event
+BoardMember --|> Member
+Member --|> Person
+Location -- Event
+Event -- Member
+Conference -- Person
+BoardMember -- BoardMeeting
+AAOUC *-- Event
+AAOUC *-- Location
+AAOUC *-- Person
+
+
 @enduml
