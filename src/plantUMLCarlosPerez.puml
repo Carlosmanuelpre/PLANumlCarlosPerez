@@ -1,6 +1,6 @@
 @startuml
 class Member {
-email : String
+
 }
 
 class BoardMember {
@@ -8,14 +8,12 @@ class BoardMember {
 }
 
 class Event {
-date : Date
-description : String
-assign(l : Location) :void
+
 
 }
 
 class Conference {
-max_attendees : Integer
+
 
 }
 
@@ -23,21 +21,16 @@ class BoardMeeting {
 }
 
 class Location {
-description : String
-adress : String
+
 
 }
 
 class Person {
-name : String
+
 }
 
 class AAOUC {
-newLocation(l :Location) : void
-newEvent(e : Event) :void
-newPerson(p :Person) :void
-informEvent(e : Event) :void
-registe(m : Member,(e : Event) : void
+
 }
 
 Event <|-- BoardMeeting
