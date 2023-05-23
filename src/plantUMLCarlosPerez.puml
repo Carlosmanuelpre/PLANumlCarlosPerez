@@ -44,13 +44,13 @@ Event <|-- BoardMeeting
 Conference --|> Event
 BoardMember --|> Member: islocated in
 Member --|> Person
-Location -- Event
-Event -- Member: attends to
-Conference -- Person: attends to
-BoardMember -- BoardMeeting: attends to
-AAOUC *-- Event
-AAOUC *-- Location
-AAOUC *-- Person
+Location"0..*"  -- "1"Event
+Event"0..*"  -- "0..*" Member: attends to
+Conference "0..*" -- "0..*" Person: attends to
+BoardMember"0..*"  -- "0..*" BoardMeeting: attends to
+AAOUC *--"0..*" Event
+AAOUC *--"0..*" Location
+AAOUC *-- "0..*" Person
 
 
 @enduml
